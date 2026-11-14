@@ -1,0 +1,294 @@
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background: linear-gradient(135deg, #050505, #111827, #090909);
+    color: #ffffff;
+
+    padding: 25px;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
+
+.contenedor {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 40px;
+
+    background: rgba(25, 30, 40, 0.90);
+
+    border: 1px solid #263b55;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px rgba(0, 119, 255, 0.15),
+        0 0 40px rgba(0, 119, 255, 0.08);
+}
+
+/* ==============================
+   TÍTULOS Y TEXTOS
+============================== */
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #38aaff;
+
+    margin-bottom: 12px;
+
+    text-shadow: 0 0 12px rgba(56, 170, 255, 0.4);
+}
+
+p {
+    text-align: center;
+    color: #aeb8c5;
+    font-size: 14px;
+
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   GRUPOS DEL FORMULARIO
+============================== */
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.grupo label {
+    color: #dce6f1;
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+/* ==============================
+   CAMPOS DE ENTRADA
+============================== */
+
+.grupo input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 13px 15px;
+
+    background: #101722;
+    color: #ffffff;
+
+    border: 1px solid #35465b;
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* EFECTO AL SELECCIONAR */
+
+.grupo input:not([type="checkbox"]):focus {
+    border-color: #168bff;
+
+    box-shadow: 0 0 10px rgba(22, 139, 255, 0.35);
+
+    background: #151f2d;
+}
+
+/* ==============================
+   LISTA DESPLEGABLE
+============================== */
+
+select {
+    width: 100%;
+    padding: 13px 15px;
+
+    background: #101722;
+    color: #ffffff;
+
+    border: 1px solid #35465b;
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+select:focus {
+    border-color: #168bff;
+    box-shadow: 0 0 10px rgba(22, 139, 255, 0.35);
+}
+
+select option {
+    background: #101722;
+    color: #ffffff;
+}
+
+/* ==============================
+   CHECKBOX
+============================== */
+
+.grupo.terminos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.terminos label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #cbd5e1;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.terminos input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #168bff;
+
+    cursor: pointer;
+}
+
+/* ==============================
+   MENSAJES DE ERROR
+============================== */
+
+small {
+    color: #ff5555;
+    font-size: 12px;
+
+    margin-top: 6px;
+}
+
+/* ==============================
+   BOTÓN DE REGISTRO
+============================== */
+
+button {
+    width: 100%;
+    padding: 14px;
+
+    background: #0878d1;
+    color: #ffffff;
+
+    border: 1px solid #168bff;
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+button:hover {
+    background: #168bff;
+
+    box-shadow: 0 0 15px rgba(22, 139, 255, 0.5);
+}
+
+/* EFECTO AL PRESIONAR */
+
+button:active {
+    background: #075ca5;
+    transform: scale(0.98);
+}
+
+/* ==============================
+   MENSAJE FINAL
+============================== */
+
+#mensajeFinal {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .contenedor {
+        padding: 25px 20px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .grupo input:not([type="checkbox"]),
+    select {
+        padding: 12px;
+    }
+
+    button {
+        padding: 13px;
+    }
+}
+
+/* ==============================
+   PANTALLAS PEQUEÑAS
+============================== */
+
+@media (max-width: 350px) {
+
+    .contenedor {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .terminos label {
+        font-size: 12px;
+    }
+}
